@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>2º Ano - Acervo de Atividades</title>
+  <title>2º Ano - Matemática</title>
 
   <style>
 
@@ -16,44 +18,62 @@
     }
 
     .logo {
-      display: block;
-      margin: 0 auto 15px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .logo img {
       width: 180px;
       max-width: 80%;
     }
 
     h1 {
       text-align: center;
-      font-size: 28px;
       color: #333;
-      margin-bottom: 8px;
+      font-size: 28px;
+      margin: 10px auto 5px;
+      max-width: 900px;
     }
 
     .subtitulo {
       text-align: center;
       color: #666;
       font-size: 18px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .voltar {
-      display: block;
-      width: fit-content;
-      margin: 0 auto 25px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .voltar a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: white;
+      color: #555;
       text-decoration: none;
-      color: #333;
       font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .voltar a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.18);
     }
 
     ul {
       list-style: none;
       padding: 0;
       max-width: 700px;
-      margin: auto;
+      margin: 0 auto;
     }
 
     li {
-      margin-bottom: 15px;
+      margin: 14px 0;
     }
 
     li a {
@@ -65,43 +85,17 @@
       font-size: 21px;
       font-weight: bold;
       color: #333;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-      transition: transform 0.2s;
+      background: #ffd6e7;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     li a:hover {
       transform: scale(1.03);
+      box-shadow: 0 7px 12px rgba(0,0,0,0.20);
     }
 
-    .matematica {
-      background: #ffd6e7;
-    }
-
-    .portugues {
-      background: #ffe5b4;
-    }
-
-    .geografia {
-      background: #d8f3dc;
-    }
-
-    .historia {
-      background: #cde7ff;
-    }
-
-    .ciencias {
-      background: #e4d4ff;
-    }
-
-    .artes {
-      background: #ffd9c2;
-    }
-
-    .religioso {
-      background: #fff2a8;
-    }
-
-    footer {
+    .rodape {
       text-align: center;
       margin-top: 35px;
       color: #777;
@@ -110,81 +104,61 @@
 
     @media (max-width: 600px) {
 
+      body {
+        padding: 15px;
+      }
+
       h1 {
-        font-size: 23px;
+        font-size: 25px;
+      }
+
+      .subtitulo {
+        font-size: 16px;
       }
 
       li a {
-        font-size: 18px;
+        font-size: 19px;
         padding: 18px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <img src="../logo.png" class="logo" alt="Escola Municipal Professora Eunice Carneiro">
-
-  <h1>📚 2º ANO - ACERVO DE ATIVIDADES 📚</h1>
-
-  <div class="subtitulo">
-    ESCOLA MUNICIPAL PROFESSORA EUNICE CARNEIRO
+  <div class="logo">
+    <img
+      src="../logo.png"
+      alt="Escola Municipal Professora Eunice Carneiro">
   </div>
 
-  <a href="../index.html" class="voltar">← VOLTAR</a>
+  <h1>
+    🔢 2º ANO - MATEMÁTICA
+  </h1>
 
-  <ul>
+  <div class="subtitulo">
+    📚 ACERVO DE ATIVIDADES 📚
+  </div>
 
-    <li>
-      <a href="matematica.html" class="matematica">
-        🔢 MATEMÁTICA
-      </a>
-    </li>
+  <div class="voltar">
+    <a href="index.html">
+      ← VOLTAR
+    </a>
+  </div>
 
-    <li>
-      <a href="portugues.html" class="portugues">
-        📖 PORTUGUÊS
-      </a>
-    </li>
+  <ul id="listaAtividades">
 
-    <li>
-      <a href="geografia.html" class="geografia">
-        🌎 GEOGRAFIA
-      </a>
-    </li>
-
-    <li>
-      <a href="historia.html" class="historia">
-        🏛️ HISTÓRIA
-      </a>
-    </li>
-
-    <li>
-      <a href="ciencias.html" class="ciencias">
-        🔬 CIÊNCIAS
-      </a>
-    </li>
-
-    <li>
-      <a href="artes.html" class="artes">
-        🎨 ARTES
-      </a>
-    </li>
-
-    <li>
-      <a href="ensinoreligioso.html" class="religioso">
-        🙏 ENSINO RELIGIOSO
-      </a>
-    </li>
+    <!-- COLOQUE AQUI AS ATIVIDADES DE MATEMÁTICA -->
 
   </ul>
 
-  <footer>
+  <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
-  </footer>
+  </div>
 
 </body>
+
 </html>
