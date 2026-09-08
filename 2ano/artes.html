@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2º Ano - Artes</title>
+
+  <style>
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fdf6e3;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 15px;
+      width: 180px;
+      max-width: 80%;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .voltar {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    li a {
+      display: block;
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: bold;
+      color: #333;
+      background: #ffd9c2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+      transition: transform 0.2s;
+    }
+
+    li a:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 35px;
+      color: #777;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <img src="../logo.png" class="logo" alt="Escola Municipal Professora Eunice Carneiro">
+
+  <h1>🎨 2º ANO - ARTES</h1>
+
+  <div class="subtitulo">
+    📚 ACERVO DE ATIVIDADES 📚
+  </div>
+
+  <a href="index.html" class="voltar">← VOLTAR</a>
+
+  <ul id="listaAtividades">
+
+    <!-- AS ATIVIDADES SERÃO COLOCADAS AQUI -->
+
+  </ul>
+
+  <footer>
+    Escola Municipal Professora Eunice Carneiro
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      const lista = document.getElementById("listaAtividades");
+
+      const atividades = Array.from(lista.querySelectorAll("li"));
+
+      atividades.sort(function(a, b) {
+
+        const nomeA = a.querySelector("a").textContent.trim();
+        const nomeB = b.querySelector("a").textContent.trim();
+
+        return nomeA.localeCompare(nomeB, "pt-BR", {
+          numeric: true,
+          sensitivity: "base"
+        });
+
+      });
+
+      atividades.forEach(function(atividade) {
+        lista.appendChild(atividade);
+      });
+
+    });
+  </script>
+
+</body>
+</html>
