@@ -1,0 +1,173 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1º Ano - Geografia</title>
+
+  <style>
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fdf6e3;
+    }
+
+    .logo {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .logo img {
+      width: 180px;
+      max-width: 80%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 28px;
+      margin: 10px auto 5px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .voltar {
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .voltar a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: white;
+      color: #555;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .voltar a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.18);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    li {
+      margin: 14px 0;
+    }
+
+    li a {
+      display: block;
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      background: #d8f3dc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    li a:hover {
+      transform: scale(1.03);
+      box-shadow: 0 7px 12px rgba(0,0,0,0.20);
+    }
+
+    .rodape {
+      text-align: center;
+      margin-top: 35px;
+      color: #777;
+      font-size: 14px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="logo">
+    <img src="../logo.png" alt="Escola Municipal Professora Eunice Carneiro">
+  </div>
+
+  <h1>
+    🌎 1º ANO - GEOGRAFIA
+  </h1>
+
+  <div class="subtitulo">
+    📚 ACERVO DE ATIVIDADES 📚
+  </div>
+
+  <div class="voltar">
+    <a href="index.html">← VOLTAR</a>
+  </div>
+
+  <ul id="listaAtividades">
+
+    <!-- AS ATIVIDADES SERÃO COLOCADAS AQUI -->
+
+  </ul>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      const lista = document.getElementById("listaAtividades");
+
+      const atividades = Array.from(
+        lista.querySelectorAll("li")
+      );
+
+      atividades.sort(function(a, b) {
+
+        const nomeA = a.querySelector("a").textContent.trim();
+
+        const nomeB = b.querySelector("a").textContent.trim();
+
+        return nomeA.localeCompare(nomeB, "pt-BR", {
+          numeric: true,
+          sensitivity: "base"
+        });
+
+      });
+
+      atividades.forEach(function(atividade) {
+
+        lista.appendChild(atividade);
+
+      });
+
+    });
+
+  </script>
+
+  <div class="rodape">
+    Escola Municipal Professora Eunice Carneiro
+  </div>
+
+</body>
+
+</html>
+```
