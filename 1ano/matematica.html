@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1º Ano - Matemática</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    li {
+      background: #fff;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #0077cc;
+    }
+
+    .voltar {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+
+    .voltar a {
+      color: #0077cc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>1º ANO - MATEMÁTICA</h1>
+
+  <div class="voltar">
+    <a href="index.html">← VOLTAR</a>
+  </div>
+
+  <ul id="listaAtividades">
+
+    <!-- AS ATIVIDADES SERÃO COLOCADAS AQUI -->
+
+  </ul>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      const lista = document.getElementById("listaAtividades");
+
+      const atividades = Array.from(lista.querySelectorAll("li"));
+
+      atividades.sort(function(a, b) {
+
+        const nomeA = a.querySelector("a").textContent.trim();
+        const nomeB = b.querySelector("a").textContent.trim();
+
+        return nomeA.localeCompare(nomeB, "pt-BR", {
+          numeric: true,
+          sensitivity: "base"
+        });
+
+      });
+
+      atividades.forEach(function(atividade) {
+        lista.appendChild(atividade);
+      });
+
+    });
+  </script>
+
+</body>
+</html>
