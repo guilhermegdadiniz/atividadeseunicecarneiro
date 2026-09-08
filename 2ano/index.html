@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>2º Ano - Matemática</title>
+  <title>2º Ano - Acervo de Atividades</title>
 
   <style>
 
@@ -16,6 +16,10 @@
       padding: 20px;
       background: #fdf6e3;
     }
+
+    /* =========================
+       CABEÇALHO
+       ========================= */
 
     .logo {
       text-align: center;
@@ -43,6 +47,10 @@
       margin-bottom: 30px;
     }
 
+    /* =========================
+       BOTÃO VOLTAR
+       ========================= */
+
     .voltar {
       max-width: 700px;
       margin: 0 auto 20px;
@@ -65,6 +73,10 @@
       box-shadow: 0 5px 10px rgba(0,0,0,0.18);
     }
 
+    /* =========================
+       LISTA
+       ========================= */
+
     ul {
       list-style: none;
       padding: 0;
@@ -85,7 +97,6 @@
       font-size: 21px;
       font-weight: bold;
       color: #333;
-      background: #ffd6e7;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -95,12 +106,44 @@
       box-shadow: 0 7px 12px rgba(0,0,0,0.20);
     }
 
+    /* =========================
+       CORES DOS ANOS
+       ========================= */
+
+    .ano1 {
+      background: #ffd6e7;
+    }
+
+    .ano2 {
+      background: #ffe5b4;
+    }
+
+    .ano3 {
+      background: #d8f3dc;
+    }
+
+    .ano4 {
+      background: #cde7ff;
+    }
+
+    .ano5 {
+      background: #e4d4ff;
+    }
+
+    /* =========================
+       RODAPÉ
+       ========================= */
+
     .rodape {
       text-align: center;
       margin-top: 35px;
       color: #777;
       font-size: 14px;
     }
+
+    /* =========================
+       CELULAR
+       ========================= */
 
     @media (max-width: 600px) {
 
@@ -129,34 +172,88 @@
 
 <body>
 
+  <!-- =========================
+       LOGO
+       ========================= -->
+
   <div class="logo">
+
     <img
       src="../logo.png"
       alt="Escola Municipal Professora Eunice Carneiro">
+
   </div>
 
+  <!-- =========================
+       TITULO
+       ========================= -->
+
   <h1>
-    🔢 2º ANO - MATEMÁTICA
+    🌟 ACERVO DE ATIVIDADES 🌟
   </h1>
 
   <div class="subtitulo">
-    📚 ACERVO DE ATIVIDADES 📚
+    📚 ESCOLA MUNICIPAL PROFESSORA EUNICE CARNEIRO 📚
   </div>
+
+  <!-- =========================
+       VOLTAR
+       ========================= -->
 
   <div class="voltar">
-    <a href="index.html">
+
+    <a href="../index.html">
       ← VOLTAR
     </a>
+
   </div>
 
-  <ul id="listaAtividades">
+  <!-- =========================
+       ANOS
+       ========================= -->
 
-    <!-- COLOQUE AQUI AS ATIVIDADES DE MATEMÁTICA -->
+  <ul>
+
+    <li>
+      <a href="../1ano/index.html" class="ano1">
+        🌟 1º ANO
+      </a>
+    </li>
+
+    <li>
+      <a href="../2ano/index.html" class="ano2">
+        🌟 2º ANO
+      </a>
+    </li>
+
+    <li>
+      <a href="../3ano/index.html" class="ano3">
+        🌟 3º ANO
+      </a>
+    </li>
+
+    <li>
+      <a href="../4ano/index.html" class="ano4">
+        🌟 4º ANO
+      </a>
+    </li>
+
+    <li>
+      <a href="../5ano/index.html" class="ano5">
+        🌟 5º ANO
+      </a>
+    </li>
 
   </ul>
 
+  <!-- =========================
+       RODAPÉ
+       ========================= -->
+
   <div class="rodape">
+
     Escola Municipal Professora Eunice Carneiro
+
   </div>
 
 </body>
