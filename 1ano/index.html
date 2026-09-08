@@ -1,85 +1,382 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>1º Ano - Acervo de Atividades</title>
+  <title>1º Ano - Acervo de Atividades</title>
 
   <style>
+
     body {
       font-family: sans-serif;
+      margin: 0;
       padding: 20px;
-      background-color: #f4f4f4;
+      background: #fdf6e3;
     }
+
+
+    /* =========================
+       CABEÇALHO
+       ========================= */
+
+    .logo {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .logo img {
+      width: 180px;
+      max-width: 80%;
+    }
+
 
     h1 {
       text-align: center;
       color: #333;
+      font-size: 28px;
+      margin: 10px auto 5px;
+      max-width: 900px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
       margin-bottom: 30px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 800px;
-      margin: 0 auto;
-    }
 
-    li {
-      background: #fff;
-      margin: 8px 0;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      display: block;
-    }
-
-    a:hover {
-      color: #0077cc;
-    }
+    /* =========================
+       BOTÃO VOLTAR
+       ========================= */
 
     .voltar {
-      max-width: 800px;
-      margin: 0 auto 20px auto;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
 
     .voltar a {
-      color: #0077cc;
+      display: inline-block;
+
+      padding: 10px 18px;
+
+      border-radius: 12px;
+
+      background: white;
+
+      color: #555;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
     }
+
+    .voltar a:hover {
+      transform: scale(1.05);
+
+      box-shadow: 0 5px 10px rgba(0,0,0,0.18);
+    }
+
+
+    /* =========================
+       LISTA
+       ========================= */
+
+    ul {
+      list-style: none;
+
+      padding: 0;
+
+      max-width: 700px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================
+       BOTÕES DAS DISCIPLINAS
+       ========================= */
+
+    li {
+      margin: 14px 0;
+    }
+
+    li a {
+      display: block;
+
+      padding: 20px;
+
+      border-radius: 18px;
+
+      text-align: center;
+
+      text-decoration: none;
+
+      font-size: 21px;
+
+      font-weight: bold;
+
+      color: #333;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    }
+
+    li a:hover {
+      transform: scale(1.03);
+
+      box-shadow: 0 7px 12px rgba(0,0,0,0.20);
+    }
+
+
+    /* =========================
+       CORES DAS DISCIPLINAS
+       ========================= */
+
+    .matematica {
+      background: #ffd6e7;
+    }
+
+    .portugues {
+      background: #ffe5b4;
+    }
+
+    .geografia {
+      background: #d8f3dc;
+    }
+
+    .historia {
+      background: #cde7ff;
+    }
+
+    .ciencias {
+      background: #e4d4ff;
+    }
+
+    .artes {
+      background: #ffd9c2;
+    }
+
+    .religioso {
+      background: #fff2a8;
+    }
+
+
+    /* =========================
+       RODAPÉ
+       ========================= */
+
+    .rodape {
+      text-align: center;
+
+      margin-top: 35px;
+
+      color: #777;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       CELULAR
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      .subtitulo {
+        font-size: 16px;
+      }
+
+      li a {
+        font-size: 19px;
+
+        padding: 18px;
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
 
-  <div class="voltar">
-    <a href="../index.html">← VOLTAR</a>
+  <!-- =========================
+       LOGO
+       ========================= -->
+
+  <div class="logo">
+
+    <img
+      src="../logo.png"
+      alt="Escola Municipal Professora Eunice Carneiro">
+
   </div>
+
+
+  <!-- =========================
+       TITULO
+       ========================= -->
+
+  <h1>
+    🌟 1º ANO 🌟
+  </h1>
+
+  <div class="subtitulo">
+    📚 ACERVO DE ATIVIDADES 📚
+  </div>
+
+
+  <!-- =========================
+       VOLTAR
+       ========================= -->
+
+  <div class="voltar">
+
+    <a href="../index.html">
+      ← VOLTAR
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       DISCIPLINAS
+       ========================= -->
 
   <ul>
 
-    <li><a href="matematica.html">MATEMÁTICA</a></li>
 
-    <li><a href="portugues.html">PORTUGUÊS</a></li>
+    <li>
 
-    <li><a href="geografia.html">GEOGRAFIA</a></li>
+      <a
+        href="matematica.html"
+        class="matematica">
 
-    <li><a href="historia.html">HISTÓRIA</a></li>
+        🔢 MATEMÁTICA
 
-    <li><a href="ciencias.html">CIÊNCIAS</a></li>
+      </a>
 
-    <li><a href="artes.html">ARTES</a></li>
+    </li>
 
-    <li><a href="ensinoreligioso.html">ENSINO RELIGIOSO</a></li>
+
+    <li>
+
+      <a
+        href="portugues.html"
+        class="portugues">
+
+        📖 PORTUGUÊS
+
+      </a>
+
+    </li>
+
+
+    <li>
+
+      <a
+        href="geografia.html"
+        class="geografia">
+
+        🌎 GEOGRAFIA
+
+      </a>
+
+    </li>
+
+
+    <li>
+
+      <a
+        href="historia.html"
+        class="historia">
+
+        🏛️ HISTÓRIA
+
+      </a>
+
+    </li>
+
+
+    <li>
+
+      <a
+        href="ciencias.html"
+        class="ciencias">
+
+        🔬 CIÊNCIAS
+
+      </a>
+
+    </li>
+
+
+    <li>
+
+      <a
+        href="artes.html"
+        class="artes">
+
+        🎨 ARTES
+
+      </a>
+
+    </li>
+
+
+    <li>
+
+      <a
+        href="ensinoreligioso.html"
+        class="religioso">
+
+        🙏 ENSINO RELIGIOSO
+
+      </a>
+
+    </li>
+
 
   </ul>
 
+
+  <!-- =========================
+       RODAPÉ
+       ========================= -->
+
+  <div class="rodape">
+
+    Escola Municipal Professora Eunice Carneiro
+
+  </div>
+
+
 </body>
+
 </html>
+```
