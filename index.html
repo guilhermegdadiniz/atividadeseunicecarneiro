@@ -1,6 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,6 +19,7 @@
     }
 
     /* LOGO */
+
     .logo {
       text-align: center;
       margin-top: 10px;
@@ -27,7 +31,9 @@
       max-width: 80%;
     }
 
+
     /* TITULO */
+
     h1 {
       text-align: center;
       color: #333;
@@ -40,45 +46,216 @@
       text-align: center;
       color: #666;
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    /* LISTA */
+
+    /* =========================
+       CAMPO DE BUSCA
+       ========================= */
+
+    .busca {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .campo-busca {
+      width: 100%;
+      box-sizing: border-box;
+
+      padding: 18px 55px 18px 20px;
+
+      border-radius: 18px;
+
+      border: 2px solid #ddd;
+
+      background: white;
+
+      font-size: 18px;
+
+      outline: none;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+
+    .campo-busca:focus {
+      border-color: #999;
+
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    }
+
+    .icone-busca {
+      position: absolute;
+
+      right: 18px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      font-size: 25px;
+
+      color: #777;
+
+      pointer-events: none;
+    }
+
+
+    /* =========================
+       RESULTADOS
+       ========================= */
+
+    #resultados {
+      max-width: 700px;
+
+      margin: 0 auto 30px;
+    }
+
+    .resultado-titulo {
+      text-align: center;
+
+      font-size: 20px;
+
+      font-weight: bold;
+
+      color: #555;
+
+      margin-bottom: 15px;
+    }
+
+    .resultado {
+      display: block;
+
+      background: white;
+
+      padding: 16px 20px;
+
+      margin: 10px 0;
+
+      border-radius: 15px;
+
+      text-decoration: none;
+
+      color: #333;
+
+      box-shadow: 0 3px 7px rgba(0,0,0,0.12);
+
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    }
+
+    .resultado:hover {
+      transform: scale(1.02);
+
+      box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+    }
+
+    .resultado-nome {
+      font-size: 18px;
+
+      font-weight: bold;
+    }
+
+    .resultado-ano {
+      font-size: 14px;
+
+      color: #777;
+
+      margin-top: 5px;
+    }
+
+    .resultado-pasta {
+      font-size: 13px;
+
+      color: #999;
+
+      margin-top: 3px;
+    }
+
+    .nenhum-resultado {
+      text-align: center;
+
+      color: #777;
+
+      background: white;
+
+      padding: 20px;
+
+      border-radius: 15px;
+    }
+
+    .carregando {
+      text-align: center;
+
+      color: #777;
+
+      padding: 15px;
+    }
+
+
+    /* =========================
+       LISTA DOS ANOS
+       ========================= */
+
     ul {
       list-style: none;
+
       padding: 0;
+
       max-width: 700px;
+
       margin: 0 auto;
     }
 
-    /* BOTÕES */
+
+    /* =========================
+       BOTOES
+       ========================= */
+
     li {
       margin: 14px 0;
     }
 
     li a {
       display: block;
+
       padding: 20px;
+
       border-radius: 18px;
+
       text-align: center;
+
       text-decoration: none;
+
       font-size: 21px;
+
       font-weight: bold;
+
       color: #333;
+
       background: white;
 
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
     }
 
-    /* EFEITO AO PASSAR O MOUSE */
     li a:hover {
       transform: scale(1.03);
+
       box-shadow: 0 7px 12px rgba(0,0,0,0.20);
     }
 
-    /* CORES DOS ANOS */
+
+    /* =========================
+       CORES DOS ANOS
+       ========================= */
 
     .ano1 {
       background: #ffd6e7;
@@ -100,28 +277,82 @@
       background: #e4d4ff;
     }
 
-    /* RODAPE */
+
+    /* =========================
+       RODAPE
+       ========================= */
 
     .rodape {
       text-align: center;
+
       margin-top: 35px;
+
       color: #777;
+
       font-size: 14px;
+    }
+
+
+    /* =========================
+       CELULAR
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .subtitulo {
+        font-size: 16px;
+      }
+
+      li a {
+        font-size: 19px;
+
+        padding: 18px;
+      }
+
+      .campo-busca {
+        font-size: 16px;
+
+        padding: 16px 50px 16px 16px;
+      }
+
+      .resultado-nome {
+        font-size: 17px;
+      }
+
     }
 
   </style>
 
 </head>
 
+
 <body>
 
-  <!-- LOGO -->
+
+  <!-- =========================
+       LOGO
+       ========================= -->
+
   <div class="logo">
-    <img src="logo.png" alt="Escola Municipal Professora Eunice Carneiro">
+
+    <img
+      src="logo.png"
+      alt="Escola Municipal Professora Eunice Carneiro">
+
   </div>
 
 
-  <!-- TITULO -->
+  <!-- =========================
+       TITULO
+       ========================= -->
 
   <h1>
     📚 ACERVO DE ATIVIDADES 📚
@@ -132,9 +363,38 @@
   </div>
 
 
-  <!-- ANOS -->
+  <!-- =========================
+       BUSCA
+       ========================= -->
 
-  <ul>
+  <div class="busca">
+
+    <input
+      type="text"
+      id="campoBusca"
+      class="campo-busca"
+      placeholder="Digite o nome da atividade..."
+      autocomplete="off">
+
+    <span class="icone-busca">
+      🔍
+    </span>
+
+  </div>
+
+
+  <!-- =========================
+       RESULTADOS
+       ========================= -->
+
+  <div id="resultados"></div>
+
+
+  <!-- =========================
+       ANOS
+       ========================= -->
+
+  <ul id="listaAnos">
 
     <li>
       <a href="1ano/index.html" class="ano1">
@@ -169,11 +429,594 @@
   </ul>
 
 
-  <!-- RODAPE -->
+  <!-- =========================
+       RODAPE
+       ========================= -->
 
   <div class="rodape">
+
     Escola Municipal Professora Eunice Carneiro
+
   </div>
 
+
+  <!-- =========================
+       SISTEMA DE BUSCA
+       ========================= -->
+
+  <script>
+
+    /*
+    ============================================================
+    CONFIGURAÇÃO DO GITHUB
+    ============================================================
+    */
+
+    const githubUsuario = "guilhermegdadiniz";
+
+    const githubRepositorio = "atividadeseunicecarneiro";
+
+    const githubBranch = "main";
+
+
+    /*
+    ============================================================
+    PASTAS QUE SERÃO PESQUISADAS
+    ============================================================
+    */
+
+    const pastas = [
+      "1ano",
+      "2ano",
+      "3ano",
+      "4ano",
+      "5ano"
+    ];
+
+
+    /*
+    ============================================================
+    ARMAZENA OS ARQUIVOS
+    ============================================================
+    */
+
+    let arquivos = [];
+
+
+    /*
+    ============================================================
+    REMOVE ACENTOS
+    ============================================================
+
+    Pátria  → patria
+    PÁTRIA  → patria
+    patria  → patria
+    Adição  → adicao
+    EDUCAÇÃO → educacao
+
+    ============================================================
+    */
+
+    function removerAcentos(texto) {
+
+      return texto
+
+        .normalize("NFD")
+
+        .replace(/[\u0300-\u036f]/g, "")
+
+        .toLowerCase();
+
+    }
+
+
+    /*
+    ============================================================
+    PEGA O NOME DO ARQUIVO
+    ============================================================
+    */
+
+    function nomeArquivo(caminho) {
+
+      let nome =
+        caminho
+          .split("/")
+          .pop();
+
+
+      /*
+      Remove a extensão
+
+      exemplo:
+
+      patria.pdf
+
+      vira:
+
+      patria
+      */
+
+      nome =
+        nome.replace(
+          /\.[^/.]+$/,
+          ""
+        );
+
+
+      /*
+      Troca hífens e underscores por espaços
+      */
+
+      nome =
+        nome
+          .replace(/[-_]/g, " ");
+
+
+      return nome;
+
+    }
+
+
+    /*
+    ============================================================
+    DESCOBRE O ANO
+    ============================================================
+    */
+
+    function descobrirAno(caminho) {
+
+      const pasta =
+        caminho.split("/")[0];
+
+
+      const numero =
+        pasta.replace("ano", "");
+
+
+      return numero + "º ANO";
+
+    }
+
+
+    /*
+    ============================================================
+    DESCOBRE AS PASTAS INTERNAS
+    ============================================================
+    */
+
+    function descobrirPasta(caminho) {
+
+      const partes =
+        caminho.split("/");
+
+
+      /*
+      Se existir uma pasta entre o ano
+      e o arquivo, mostra essa pasta.
+
+      Exemplo:
+
+      1ano/portugues/patria.pdf
+
+      mostra:
+
+      Português
+      */
+
+      if (partes.length >= 3) {
+
+        return partes
+          .slice(1, -1)
+          .join(" / ")
+          .replace(/[-_]/g, " ");
+
+      }
+
+
+      return "";
+
+    }
+
+
+    /*
+    ============================================================
+    CARREGA TODOS OS ARQUIVOS DO GITHUB
+    ============================================================
+
+    Faz apenas UMA consulta à API.
+
+    ============================================================
+    */
+
+    async function carregarArquivos() {
+
+      const resultados =
+        document.getElementById(
+          "resultados"
+        );
+
+
+      resultados.innerHTML = `
+
+        <div class="carregando">
+
+          ⏳ Carregando atividades...
+
+        </div>
+
+      `;
+
+
+      try {
+
+        const url =
+          `https://api.github.com/repos/${githubUsuario}/${githubRepositorio}/git/trees/${githubBranch}?recursive=1`;
+
+
+        const resposta =
+          await fetch(url);
+
+
+        if (!resposta.ok) {
+
+          throw new Error(
+            "Não foi possível acessar o GitHub."
+          );
+
+        }
+
+
+        const dados =
+          await resposta.json();
+
+
+        if (!dados.tree) {
+
+          throw new Error(
+            "A lista de arquivos não foi encontrada."
+          );
+
+        }
+
+
+        /*
+        Seleciona somente arquivos
+        dentro das pastas dos anos.
+
+        Não importa quantas subpastas existam.
+        */
+
+        arquivos =
+          dados.tree.filter(arquivo => {
+
+            if (arquivo.type !== "blob") {
+
+              return false;
+
+            }
+
+
+            return pastas.some(pasta => {
+
+              return arquivo.path.startsWith(
+                pasta + "/"
+              );
+
+            });
+
+          });
+
+
+        /*
+        Ordena alfabeticamente
+        */
+
+        arquivos.sort((a, b) => {
+
+          return nomeArquivo(a.path)
+            .localeCompare(
+              nomeArquivo(b.path),
+              "pt-BR"
+            );
+
+        });
+
+
+        resultados.innerHTML = "";
+
+
+        console.log(
+          "Arquivos encontrados:",
+          arquivos.length
+        );
+
+      }
+
+      catch (erro) {
+
+        console.error(erro);
+
+
+        resultados.innerHTML = `
+
+          <div class="nenhum-resultado">
+
+            ⚠️ Não foi possível carregar
+            as atividades.
+
+            <br><br>
+
+            Verifique sua conexão com a internet
+            e tente novamente.
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    /*
+    ============================================================
+    REALIZA A BUSCA
+    ============================================================
+    */
+
+    function realizarBusca() {
+
+      const campo =
+        document.getElementById(
+          "campoBusca"
+        );
+
+
+      const resultados =
+        document.getElementById(
+          "resultados"
+        );
+
+
+      const listaAnos =
+        document.getElementById(
+          "listaAnos"
+        );
+
+
+      /*
+      Texto digitado
+      */
+
+      const busca =
+        removerAcentos(
+          campo.value.trim()
+        );
+
+
+      /*
+      ==========================================================
+      SE O CAMPO ESTIVER VAZIO
+      ==========================================================
+      */
+
+      if (busca === "") {
+
+        resultados.innerHTML = "";
+
+        listaAnos.style.display =
+          "block";
+
+        return;
+
+      }
+
+
+      /*
+      Esconde os anos
+      */
+
+      listaAnos.style.display =
+        "none";
+
+
+      /*
+      ==========================================================
+      PROCURA NOS ARQUIVOS
+      ==========================================================
+
+      A busca considera:
+
+      - nome do arquivo
+      - pasta
+      - caminho completo
+
+      E ignora acentos.
+
+      ==========================================================
+      */
+
+      const encontrados =
+        arquivos.filter(arquivo => {
+
+
+          const caminhoNormalizado =
+            removerAcentos(
+              arquivo.path
+            );
+
+
+          return caminhoNormalizado
+            .includes(busca);
+
+        });
+
+
+      /*
+      ==========================================================
+      NENHUM RESULTADO
+      ==========================================================
+      */
+
+      if (encontrados.length === 0) {
+
+        resultados.innerHTML = `
+
+          <div class="nenhum-resultado">
+
+            😕 Nenhuma atividade encontrada.
+
+            <br><br>
+
+            Tente outra palavra.
+
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+      /*
+      ==========================================================
+      TITULO DOS RESULTADOS
+      ==========================================================
+      */
+
+      let html = `
+
+        <div class="resultado-titulo">
+
+          📚 ${encontrados.length}
+          atividade(s) encontrada(s)
+
+        </div>
+
+      `;
+
+
+      /*
+      ==========================================================
+      MONTA OS RESULTADOS
+      ==========================================================
+      */
+
+      encontrados.forEach(arquivo => {
+
+
+        const nome =
+          nomeArquivo(
+            arquivo.path
+          );
+
+
+        const ano =
+          descobrirAno(
+            arquivo.path
+          );
+
+
+        const pasta =
+          descobrirPasta(
+            arquivo.path
+          );
+
+
+        /*
+        Caminho relativo ao próprio site.
+
+        Isso permite abrir:
+
+        PDF
+        HTML
+        imagens
+        etc.
+        */
+
+        const caminho =
+          encodeURI(
+            arquivo.path
+          );
+
+
+        html += `
+
+          <a
+            class="resultado"
+            href="${caminho}"
+            target="_blank">
+
+            <div class="resultado-nome">
+
+              📄 ${nome}
+
+            </div>
+
+            <div class="resultado-ano">
+
+              📚 ${ano}
+
+            </div>
+
+            ${
+              pasta
+              ?
+              `
+              <div class="resultado-pasta">
+
+                📂 ${pasta}
+
+              </div>
+              `
+              :
+              ""
+            }
+
+          </a>
+
+        `;
+
+      });
+
+
+      /*
+      Coloca os resultados na página
+      */
+
+      resultados.innerHTML =
+        html;
+
+    }
+
+
+    /*
+    ============================================================
+    ATUALIZA A BUSCA ENQUANTO DIGITA
+    ============================================================
+    */
+
+    document
+      .getElementById("campoBusca")
+      .addEventListener(
+        "input",
+        realizarBusca
+      );
+
+
+    /*
+    ============================================================
+    CARREGA OS ARQUIVOS QUANDO A PÁGINA ABRE
+    ============================================================
+    */
+
+    carregarArquivos();
+
+  </script>
+
+
 </body>
+
 </html>
+```
