@@ -4,79 +4,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Acervo de Atividades Escola Municipal Professora Eunice Carneiro</title>
+  <title>Acervo de Atividades - Escola Municipal Professora Eunice Carneiro</title>
 
   <style>
+
     body {
       font-family: sans-serif;
+      margin: 0;
       padding: 20px;
-      background-color: #f4f4f4;
+      background: #fdf6e3;
     }
 
+    /* LOGO */
+    .logo {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .logo img {
+      width: 180px;
+      max-width: 80%;
+    }
+
+    /* TITULO */
     h1 {
       text-align: center;
       color: #333;
+      font-size: 28px;
+      margin: 10px auto 5px;
+      max-width: 900px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #666;
+      font-size: 18px;
       margin-bottom: 30px;
     }
 
+    /* LISTA */
     ul {
       list-style: none;
       padding: 0;
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
+    /* BOTÕES */
     li {
-      background: #fff;
-      margin: 8px 0;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 14px 0;
     }
 
-    a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
+    li a {
       display: block;
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: bold;
+      color: #333;
+      background: white;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    a:hover {
-      color: #0077cc;
+    /* EFEITO AO PASSAR O MOUSE */
+    li a:hover {
+      transform: scale(1.03);
+      box-shadow: 0 7px 12px rgba(0,0,0,0.20);
     }
+
+    /* CORES DOS ANOS */
+
+    .ano1 {
+      background: #ffd6e7;
+    }
+
+    .ano2 {
+      background: #ffe5b4;
+    }
+
+    .ano3 {
+      background: #d8f3dc;
+    }
+
+    .ano4 {
+      background: #cde7ff;
+    }
+
+    .ano5 {
+      background: #e4d4ff;
+    }
+
+    /* RODAPE */
+
+    .rodape {
+      text-align: center;
+      margin-top: 35px;
+      color: #777;
+      font-size: 14px;
+    }
+
   </style>
+
 </head>
 
 <body>
 
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="logo.png" alt="Escola Municipal Professora Eunice Carneiro">
+  </div>
+
+
+  <!-- TITULO -->
+
   <h1>
-    ACERVO DE ATIVIDADES -<br>
-    ESCOLA MUNICIPAL PROFESSORA EUNICE CARNEIRO
+    📚 ACERVO DE ATIVIDADES 📚
   </h1>
+
+  <div class="subtitulo">
+    ESCOLA MUNICIPAL PROFESSORA EUNICE CARNEIRO
+  </div>
+
+
+  <!-- ANOS -->
 
   <ul>
 
     <li>
-      <a href="1ano/index.html">1º ANO</a>
+      <a href="1ano/index.html" class="ano1">
+        🌟 1º ANO 🌟
+      </a>
     </li>
 
     <li>
-      <a href="2ano/index.html">2º ANO</a>
+      <a href="2ano/index.html" class="ano2">
+        🚀 2º ANO 🚀
+      </a>
     </li>
 
     <li>
-      <a href="3ano/index.html">3º ANO</a>
+      <a href="3ano/index.html" class="ano3">
+        🌱 3º ANO 🌱
+      </a>
     </li>
 
     <li>
-      <a href="4ano/index.html">4º ANO</a>
+      <a href="4ano/index.html" class="ano4">
+        🧩 4º ANO 🧩
+      </a>
     </li>
 
     <li>
-      <a href="5ano/index.html">5º ANO</a>
+      <a href="5ano/index.html" class="ano5">
+        🎨 5º ANO 🎨
+      </a>
     </li>
 
   </ul>
+
+
+  <!-- RODAPE -->
+
+  <div class="rodape">
+    Escola Municipal Professora Eunice Carneiro
+  </div>
 
 </body>
 </html>
