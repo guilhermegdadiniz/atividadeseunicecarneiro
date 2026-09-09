@@ -18,8 +18,6 @@
       background: #fdf6e3;
     }
 
-    /* LOGO */
-
     .logo {
       text-align: center;
       margin-top: 10px;
@@ -30,9 +28,6 @@
       width: 180px;
       max-width: 80%;
     }
-
-
-    /* TITULO */
 
     h1 {
       text-align: center;
@@ -49,11 +44,6 @@
       margin-bottom: 25px;
     }
 
-
-    /* =========================
-       CAMPO DE BUSCA
-       ========================= */
-
     .busca {
       max-width: 700px;
       margin: 0 auto 30px;
@@ -63,86 +53,53 @@
     .campo-busca {
       width: 100%;
       box-sizing: border-box;
-
       padding: 18px 55px 18px 20px;
-
       border-radius: 18px;
-
       border: 2px solid #ddd;
-
       background: white;
-
       font-size: 18px;
-
       outline: none;
-
       box-shadow: 0 4px 8px rgba(0,0,0,0.10);
-
       transition: border 0.2s, box-shadow 0.2s;
     }
 
     .campo-busca:focus {
       border-color: #999;
-
       box-shadow: 0 5px 12px rgba(0,0,0,0.15);
     }
 
     .icone-busca {
       position: absolute;
-
       right: 18px;
-
       top: 50%;
-
       transform: translateY(-50%);
-
       font-size: 25px;
-
       color: #777;
-
       pointer-events: none;
     }
 
-
-    /* =========================
-       RESULTADOS
-       ========================= */
-
     #resultados {
       max-width: 700px;
-
       margin: 0 auto 30px;
     }
 
     .resultado-titulo {
       text-align: center;
-
       font-size: 20px;
-
       font-weight: bold;
-
       color: #555;
-
       margin-bottom: 15px;
     }
 
     .resultado {
       display: block;
-
       background: white;
-
       padding: 16px 20px;
-
       margin: 10px 0;
-
       border-radius: 15px;
-
       text-decoration: none;
-
       color: #333;
-
       box-shadow: 0 3px 7px rgba(0,0,0,0.12);
-
       transition:
         transform 0.2s,
         box-shadow 0.2s;
@@ -150,71 +107,46 @@
 
     .resultado:hover {
       transform: scale(1.02);
-
       box-shadow: 0 6px 12px rgba(0,0,0,0.18);
     }
 
     .resultado-nome {
       font-size: 18px;
-
       font-weight: bold;
     }
 
     .resultado-ano {
       font-size: 14px;
-
       color: #777;
-
       margin-top: 5px;
     }
 
     .resultado-pasta {
       font-size: 13px;
-
       color: #999;
-
       margin-top: 3px;
     }
 
     .nenhum-resultado {
       text-align: center;
-
       color: #777;
-
       background: white;
-
       padding: 20px;
-
       border-radius: 15px;
     }
 
     .carregando {
       text-align: center;
-
       color: #777;
-
       padding: 15px;
     }
 
-
-    /* =========================
-       LISTA DOS ANOS
-       ========================= */
-
     ul {
       list-style: none;
-
       padding: 0;
-
       max-width: 700px;
-
       margin: 0 auto;
     }
-
-
-    /* =========================
-       BOTOES
-       ========================= */
 
     li {
       margin: 14px 0;
@@ -222,25 +154,15 @@
 
     li a {
       display: block;
-
       padding: 20px;
-
       border-radius: 18px;
-
       text-align: center;
-
       text-decoration: none;
-
       font-size: 21px;
-
       font-weight: bold;
-
       color: #333;
-
       background: white;
-
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-
       transition:
         transform 0.2s,
         box-shadow 0.2s;
@@ -248,14 +170,8 @@
 
     li a:hover {
       transform: scale(1.03);
-
       box-shadow: 0 7px 12px rgba(0,0,0,0.20);
     }
-
-
-    /* =========================
-       CORES DOS ANOS
-       ========================= */
 
     .ano1 {
       background: #ffd6e7;
@@ -277,25 +193,12 @@
       background: #e4d4ff;
     }
 
-
-    /* =========================
-       RODAPE
-       ========================= */
-
     .rodape {
       text-align: center;
-
       margin-top: 35px;
-
       color: #777;
-
       font-size: 14px;
     }
-
-
-    /* =========================
-       CELULAR
-       ========================= */
 
     @media (max-width: 600px) {
 
@@ -313,13 +216,11 @@
 
       li a {
         font-size: 19px;
-
         padding: 18px;
       }
 
       .campo-busca {
         font-size: 16px;
-
         padding: 16px 50px 16px 16px;
       }
 
@@ -335,10 +236,6 @@
 
 <body>
 
-  <!-- =========================
-       LOGO
-       ========================= -->
-
   <div class="logo">
 
 ```
@@ -349,10 +246,6 @@
 
   </div>
 
-  <!-- =========================
-       TITULO
-       ========================= -->
-
   <h1>
     📚 ACERVO DE ATIVIDADES 📚
   </h1>
@@ -360,10 +253,6 @@
   <div class="subtitulo">
     ESCOLA MUNICIPAL PROFESSORA EUNICE CARNEIRO
   </div>
-
-  <!-- =========================
-       BUSCA
-       ========================= -->
 
   <div class="busca">
 
@@ -382,15 +271,7 @@
 
   </div>
 
-  <!-- =========================
-       RESULTADOS
-       ========================= -->
-
   <div id="resultados"></div>
-
-  <!-- =========================
-       ANOS
-       ========================= -->
 
   <ul id="listaAnos">
 
@@ -428,10 +309,6 @@
 
   </ul>
 
-  <!-- =========================
-       RODAPE
-       ========================= -->
-
   <div class="rodape">
 
 ```
@@ -439,10 +316,6 @@ Escola Municipal Professora Eunice Carneiro
 ```
 
   </div>
-
-  <!-- =========================
-       SISTEMA DE BUSCA
-       ========================= -->
 
   <script>
 
@@ -452,7 +325,6 @@ Escola Municipal Professora Eunice Carneiro
 
     const githubBranch = "main";
 
-
     const pastas = [
       "1ano",
       "2ano",
@@ -461,9 +333,7 @@ Escola Municipal Professora Eunice Carneiro
       "5ano"
     ];
 
-
     let arquivos = [];
-
 
     function removerAcentos(texto) {
 
@@ -473,7 +343,6 @@ Escola Municipal Professora Eunice Carneiro
         .toLowerCase();
 
     }
-
 
     function nomeArquivo(caminho) {
 
@@ -496,7 +365,6 @@ Escola Municipal Professora Eunice Carneiro
 
     }
 
-
     function descobrirAno(caminho) {
 
       const pasta =
@@ -508,7 +376,6 @@ Escola Municipal Professora Eunice Carneiro
       return numero + "º ANO";
 
     }
-
 
     function descobrirPasta(caminho) {
 
@@ -528,7 +395,6 @@ Escola Municipal Professora Eunice Carneiro
 
     }
 
-
     async function carregarArquivos() {
 
       const resultados =
@@ -536,27 +402,19 @@ Escola Municipal Professora Eunice Carneiro
           "resultados"
         );
 
-
       resultados.innerHTML = `
-
         <div class="carregando">
-
           ⏳ Carregando atividades...
-
         </div>
-
       `;
-
 
       try {
 
         const url =
           `https://api.github.com/repos/${githubUsuario}/${githubRepositorio}/git/trees/${githubBranch}?recursive=1`;
 
-
         const resposta =
           await fetch(url);
-
 
         if (!resposta.ok) {
 
@@ -566,10 +424,8 @@ Escola Municipal Professora Eunice Carneiro
 
         }
 
-
         const dados =
           await resposta.json();
-
 
         if (!dados.tree) {
 
@@ -579,7 +435,6 @@ Escola Municipal Professora Eunice Carneiro
 
         }
 
-
         arquivos =
           dados.tree.filter(arquivo => {
 
@@ -588,7 +443,6 @@ Escola Municipal Professora Eunice Carneiro
               return false;
 
             }
-
 
             return pastas.some(pasta => {
 
@@ -600,7 +454,6 @@ Escola Municipal Professora Eunice Carneiro
 
           });
 
-
         arquivos.sort((a, b) => {
 
           return nomeArquivo(a.path)
@@ -611,9 +464,7 @@ Escola Municipal Professora Eunice Carneiro
 
         });
 
-
         resultados.innerHTML = "";
-
 
         console.log(
           "Arquivos encontrados:",
@@ -625,7 +476,6 @@ Escola Municipal Professora Eunice Carneiro
       catch (erro) {
 
         console.error(erro);
-
 
         resultados.innerHTML = `
 
@@ -647,7 +497,6 @@ Escola Municipal Professora Eunice Carneiro
 
     }
 
-
     function realizarBusca() {
 
       const campo =
@@ -655,24 +504,20 @@ Escola Municipal Professora Eunice Carneiro
           "campoBusca"
         );
 
-
       const resultados =
         document.getElementById(
           "resultados"
         );
-
 
       const listaAnos =
         document.getElementById(
           "listaAnos"
         );
 
-
       const busca =
         removerAcentos(
           campo.value.trim()
         );
-
 
       if (busca === "") {
 
@@ -685,10 +530,8 @@ Escola Municipal Professora Eunice Carneiro
 
       }
 
-
       listaAnos.style.display =
         "none";
-
 
       const encontrados =
         arquivos.filter(arquivo => {
@@ -698,12 +541,10 @@ Escola Municipal Professora Eunice Carneiro
               arquivo.path
             );
 
-
           return caminhoNormalizado
             .includes(busca);
 
         });
-
 
       if (encontrados.length === 0) {
 
@@ -725,7 +566,6 @@ Escola Municipal Professora Eunice Carneiro
 
       }
 
-
       let html = `
 
         <div class="resultado-titulo">
@@ -737,7 +577,6 @@ Escola Municipal Professora Eunice Carneiro
 
       `;
 
-
       encontrados.forEach(arquivo => {
 
         const nome =
@@ -745,24 +584,20 @@ Escola Municipal Professora Eunice Carneiro
             arquivo.path
           );
 
-
         const ano =
           descobrirAno(
             arquivo.path
           );
-
 
         const pasta =
           descobrirPasta(
             arquivo.path
           );
 
-
         const caminho =
           encodeURI(
             arquivo.path
           );
-
 
         html += `
 
@@ -803,12 +638,10 @@ Escola Municipal Professora Eunice Carneiro
 
       });
 
-
       resultados.innerHTML =
         html;
 
     }
-
 
     document
       .getElementById("campoBusca")
@@ -816,7 +649,6 @@ Escola Municipal Professora Eunice Carneiro
         "input",
         realizarBusca
       );
-
 
     carregarArquivos();
 
