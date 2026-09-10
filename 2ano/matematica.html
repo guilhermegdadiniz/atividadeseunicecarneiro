@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -131,9 +132,9 @@
 
   <div class="logo">
 
-    <img
-      src="../logo.png"
-      alt="Escola Municipal Professora Eunice Carneiro">
+<img
+  src="../logo.png"
+  alt="Escola Municipal Professora Eunice Carneiro">
 
   </div>
 
@@ -147,27 +148,55 @@
 
   <div class="voltar">
 
-    <a href="./index.html">
-      ← VOLTAR
-    </a>
+<a href="./index.html">
+  ← VOLTAR
+</a>
 
   </div>
 
   <ul id="listaAtividades">
 
 <li><a href="APRENDENDO%20AS%20HORAS.pdf" target="_blank">APRENDENDO AS HORAS</a></li>
+
 <li><a href="ADICAO%20COM%20RESERVA%20E%20SUBTRACAO%20COM%20EMPRESTIMO.pdf" target="_blank">ADIÇÃO COM RESERVA E SUBTRAÇÃO COM EMPRÉSTIMO</a></li>
+
 <li><a href="FORMAR%20QUANTIDADES%20E%20CONTAR.pdf" target="_blank">FORMAR QUANTIDADES E CONTAR</a></li>
+
 <li><a href="NUMEROS%20MAIORES%20QUE%20500.pdf" target="_blank">NÚMEROS MAIORES QUE 500</a></li>
+
 <li><a href="ORDENAR%20NUMEROS.pdf" target="_blank">ORDENAR NÚMEROS</a></li>
-  
+```
+
   </ul>
 
   <div class="rodape">
 
-    Escola Municipal Professora Eunice Carneiro
+Escola Municipal Professora Eunice Carneiro
 
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
