@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -127,14 +128,52 @@
 
   <ul id="listaAtividades">
 
-  <li><a href="CAPA%20PARA%20AVALIA%C3%87%C3%83O%202%C2%BA%20TRIMESTRE.pdf" target="_blank">CAPA PARA AVALIAÇÃO 2º TRIMESTRE</a></li>
-  <li><a href="CAPINHAS%20DE%20CADERNOS%2001.pdf" target="_blank">CAPINHAS DE CADERNOS 01</a></li>  
+<li>
+  <a href="CAPA%20PARA%20AVALIA%C3%87%C3%83O%202%C2%BA%20TRIMESTRE.pdf" target="_blank">
+    CAPA PARA AVALIAÇÃO 2º TRIMESTRE
+  </a>
+</li>
+
+<li>
+  <a href="CAPINHAS%20DE%20CADERNOS%2001.pdf" target="_blank">
+    CAPINHAS DE CADERNOS 01
+  </a>
+</li>
+
+<li>
+  <a href="CRIE%20UMA%20ARTE.pdf" target="_blank">
+    CRIE UMA ARTE
+  </a>
+</li>
 
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
