@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -127,15 +128,59 @@
   </div>
 
   <ul id="listaAtividades">
-    
-  <li><a href="INDEPEND%C3%8ANCIA%20P%C3%81TRIA%20AMADA%20BRASIL.pdf" target="_blank">INDEPENDÊNCIA PÁTRIA AMADA BRASIL</a></li>
-  <li><a href="INDEPEND%C3%8ANCIA%20DO%20BRASIL.pdf" target="_blank">INDEPENDÊNCIA DO BRASIL</a></li>
-   
+
+<li>
+  <a href="INDEPEND%C3%8ANCIA%20P%C3%81TRIA%20AMADA%20BRASIL.pdf" target="_blank">
+    INDEPENDÊNCIA PÁTRIA AMADA BRASIL
+  </a>
+</li>
+
+<li>
+  <a href="INDEPEND%C3%8ANCIA%20DO%20BRASIL.pdf" target="_blank">
+    INDEPENDÊNCIA DO BRASIL
+  </a>
+</li>
+
+<li>
+  <a href="7%20DE%20SETEMBRO%20.pdf" target="_blank">
+    7 DE SETEMBRO
+  </a>
+</li>
+
+<li>
+  <a href="AS%20PROFISSOES%20E%20A%20TECNOLOGIA.pdf" target="_blank">
+    AS PROFISSÕES E A TECNOLOGIA
+  </a>
+</li>
+
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
