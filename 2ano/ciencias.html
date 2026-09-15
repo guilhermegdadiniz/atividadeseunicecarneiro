@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -33,6 +34,7 @@
       color: #333;
       font-size: 28px;
       margin: 10px auto 5px;
+      max-width: 900px;
     }
 
     .subtitulo {
@@ -101,6 +103,27 @@
       font-size: 14px;
     }
 
+    @media (max-width: 600px) {
+
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      .subtitulo {
+        font-size: 16px;
+      }
+
+      li a {
+        font-size: 19px;
+        padding: 18px;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -108,7 +131,12 @@
 <body>
 
   <div class="logo">
-    <img src="../logo.png" alt="Escola Municipal Professora Eunice Carneiro">
+
+<img
+  src="../logo.png"
+  alt="Escola Municipal Professora Eunice Carneiro">
+
+
   </div>
 
   <h1>
@@ -120,21 +148,62 @@
   </div>
 
   <div class="voltar">
-    <a href="./index.html">
-      ← VOLTAR
-    </a>
+
+
+<a href="./index.html">
+  ← VOLTAR
+</a>
+
+
   </div>
 
   <ul id="listaAtividades">
 
-  <li><a href="O%20SOL%20FONTE%20DE%20LUZ%20E%20CALOR.pdf" target="_blank">O SOL: FONTE DE LUZ E CALOR</a></li>
-  <li><a href="DIFERENCIANDO%20DIA%20E%20NOITE.pdf" target="_blank">DIFERENCIANDO DIA E NOITE</a></li>
+
+<li>
+  <a href="O%20SOL%20FONTE%20DE%20LUZ%20E%20CALOR.pdf" target="_blank">
+    O SOL: FONTE DE LUZ E CALOR
+  </a>
+</li>
+
+<li>
+  <a href="DIFERENCIANDO%20DIA%20E%20NOITE.pdf" target="_blank">
+    DIFERENCIANDO DIA E NOITE
+  </a>
+</li>
+
 
   </ul>
 
   <div class="rodape">
-    Escola Municipal Professora Eunice Carneiro
+
+Escola Municipal Professora Eunice Carneiro
+
+
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
