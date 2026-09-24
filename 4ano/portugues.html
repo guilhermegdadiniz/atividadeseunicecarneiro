@@ -159,6 +159,29 @@
     Escola Municipal Professora Eunice Carneiro
   </div>
 
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
+
 </body>
 
 </html>
