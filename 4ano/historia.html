@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -130,9 +131,11 @@
 <body>
 
   <div class="logo">
-    <img
-      src="../logo.png"
-      alt="Escola Municipal Professora Eunice Carneiro">
+
+<img
+  src="../logo.png"
+  alt="Escola Municipal Professora Eunice Carneiro">
+
   </div>
 
   <h1>
@@ -144,30 +147,71 @@
   </div>
 
   <div class="voltar">
-    <a href="index.html">
-      ← VOLTAR
-    </a>
+
+
+<a href="index.html">
+  ← VOLTAR
+</a>
+
+
   </div>
 
   <ul id="listaAtividades">
 
 <li><a href="SLIDE%20A%20HISTORIA%20DE%20MINAS%20GERAIS%20E%20A%20EXPLORACAO%20DO%20OURO.pdf" target="_blank">SLIDE: A HISTÓRIA DE MINAS GERAIS E A EXPLORAÇÃO DO OURO</a></li>
+
 <li><a href="A%20VIDA%20NA%20PRE%20HISTORIA.pdf" target="_blank">A VIDA NA PRÉ-HISTÓRIA</a></li>
+
 <li><a href="FESTA%20JUNINA.pdf" target="_blank">FESTA JUNINA</a></li>
+
 <li><a href="HISTORIA%20DE%20MINAS%20GERAIS%20E%20INCONFIDENCIA%20MINEIRA.pdf" target="_blank">HISTÓRIA DE MINAS GERAIS E INCONFIDÊNCIA MINEIRA</a></li>
+
 <li><a href="NOMADES.pdf" target="_blank">NÔMADES</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20HISTORIA%201%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: 1º TRIMESTRE</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20HISTORIA%202%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: 2º TRIMESTRE 02</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20HISTORIA%202%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: 2º TRIMESTRE</a></li>
+
 <li><a href="ROTAS%20TERRESTRES%20FLUVIAIS%20E%20MARITIMAS.pdf" target="_blank">ROTAS TERRESTRES, FLUVIAIS E MARÍTIMAS</a></li>
+
 <li><a href="SURGIMENTO%20DO%20COMERCIO%20E%20DO%20DINHEIRO.pdf" target="_blank">SURGIMENTO DO COMÉRCIO E DO DINHEIRO</a></li>
+
 <li><a href="SURGIMENTO%20E%20DESENVOLVIMENTO%20DAS%20CIDADES.pdf" target="_blank">SURGIMENTO E DESENVOLVIMENTO DAS CIDADES</a></li>
+
 
   </ul>
 
   <div class="rodape">
-    Escola Municipal Professora Eunice Carneiro
+
+
+Escola Municipal Professora Eunice Carneiro
+
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
