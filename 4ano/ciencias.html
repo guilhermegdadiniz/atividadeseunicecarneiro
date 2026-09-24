@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -130,9 +131,13 @@
 <body>
 
   <div class="logo">
-    <img
-      src="../logo.png"
-      alt="Escola Municipal Professora Eunice Carneiro">
+
+
+<img
+  src="../logo.png"
+  alt="Escola Municipal Professora Eunice Carneiro">
+
+
   </div>
 
   <h1>
@@ -144,32 +149,77 @@
   </div>
 
   <div class="voltar">
-    <a href="index.html">
-      ← VOLTAR
-    </a>
+
+
+<a href="index.html">
+  ← VOLTAR
+</a>
+
+
   </div>
 
   <ul id="listaAtividades">
 
+
 <li><a href="A%20TERRA%20E%20O%20UNIVERSO.pdf" target="_blank">A TERRA E O UNIVERSO</a></li>
-<li><a href="AGUA.pdf" target="_blank"> ÁGUA</a></li>
+
+<li><a href="AGUA.pdf" target="_blank">ÁGUA</a></li>
+
 <li><a href="CALENDARIOS%20FENOMENOS%20CICLICOS%20E%20CULTURA.pdf" target="_blank">CALENDÁRIOS, FENÔMENOS CÍCLICOS E CULTURA</a></li>
+
 <li><a href="DENGUE%20E%20COVID%2019.pdf" target="_blank">DENGUE E COVID-19</a></li>
+
 <li><a href="MATERIA%20E%20ENERGIA.pdf" target="_blank">MATÉRIA E ENERGIA</a></li>
+
 <li><a href="MISTURAS%20HOMOGENEAS%20E%20HETEROGENEAS.pdf" target="_blank">MISTURAS HOMOGÊNEAS E HETEROGÊNEAS</a></li>
+
 <li><a href="ORIENTACAO%20PELO%20SOL.pdf" target="_blank">ORIENTAÇÃO PELO SOL</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20CIENCIAS%201%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO CIÊNCIAS: 1º TRIMESTRE 02</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20CIENCIAS%201%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO CIÊNCIAS: 1º TRIMESTRE</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20CIENCIAS%202%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO CIÊNCIAS: 2º TRIMESTRE 02</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20CIENCIAS%202%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO CIÊNCIAS: 2º TRIMESTRE</a></li>
+
 <li><a href="TRANSFORMACAO%20DE%20MATERIA.pdf" target="_blank">TRANSFORMAÇÃO DE MATÉRIA</a></li>
+
 <li><a href="VIRUS%20BACTERIAS%20PROTOZOARIOS%20E%20FUNGOS.pdf" target="_blank">VÍRUS, BACTÉRIAS, PROTOZOÁRIOS E FUNGOS</a></li>
+
 
   </ul>
 
   <div class="rodape">
-    Escola Municipal Professora Eunice Carneiro
+
+
+Escola Municipal Professora Eunice Carneiro
+
+
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
