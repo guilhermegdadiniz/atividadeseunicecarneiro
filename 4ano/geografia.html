@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -130,9 +131,13 @@
 <body>
 
   <div class="logo">
-    <img
-      src="../logo.png"
-      alt="Escola Municipal Professora Eunice Carneiro">
+
+
+<img
+  src="../logo.png"
+  alt="Escola Municipal Professora Eunice Carneiro">
+
+
   </div>
 
   <h1>
@@ -144,31 +149,73 @@
   </div>
 
   <div class="voltar">
-    <a href="index.html">
-      ← VOLTAR
-    </a>
+
+<a href="index.html">
+  ← VOLTAR
+</a>
+
+
   </div>
 
   <ul id="listaAtividades">
 
+
 <li><a href="AGRICULTURA.pdf" target="_blank">AGRICULTURA</a></li>
+
 <li><a href="CARTOGRAFIA%20MERIDIANO%20DE%20GREENWICH.pdf" target="_blank">CARTOGRAFIA E MERIDIANO DE GREENWICH</a></li>
+
 <li><a href="CORDENADAS%20GEOGRAFICAS.pdf" target="_blank">COORDENADAS GEOGRÁFICAS</a></li>
+
 <li><a href="DESCOBRINDO%20MINAS%20GERAIS.pdf" target="_blank">DESCOBRINDO MINAS GERAIS</a></li>
+
 <li><a href="ESTADOS%20BRASILEIROS%20E%20MINAS%20GERAIS.pdf" target="_blank">ESTADOS BRASILEIROS E MINAS GERAIS</a></li>
+
 <li><a href="MIGRACAO.pdf" target="_blank">MIGRAÇÃO</a></li>
+
 <li><a href="MINAS%20GERAIS%20E%20MONTES%20CLAROS.pdf" target="_blank">MINAS GERAIS E MONTES CLAROS</a></li>
+
 <li><a href="PROCESSOS%20MIGRATORIOS.pdf" target="_blank">PROCESSOS MIGRATÓRIOS</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20DE%20GEOGRAFIA%201%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO DE GEOGRAFIA: 1º TRIMESTRE 02</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20DE%20GEOGRAFIA%201%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO DE GEOGRAFIA: 1º TRIMESTRE</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20DE%20GEOGRAFIA%202%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO DE GEOGRAFIA: 2º TRIMESTRE 02</a></li>
+
 <li><a href="PROVA%20AVALIACAO%20DE%20GEOGRAFIA%202%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO DE GEOGRAFIA: 2º TRIMESTRE</a></li>
+
 
   </ul>
 
   <div class="rodape">
-    Escola Municipal Professora Eunice Carneiro
+
+Escola Municipal Professora Eunice Carneiro
+
+
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
