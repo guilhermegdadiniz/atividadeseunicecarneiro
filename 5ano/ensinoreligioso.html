@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -149,7 +150,9 @@
 
   <ul id="listaAtividades">
 
-    <!-- COLOQUE AQUI AS ATIVIDADES DE ENSINO RELIGIOSO -->
+<li><a href="DEVERES%20DA%20CRIANCA.pdf" target="_blank">DEVERES DA CRIANÇA</a></li>
+<li><a href="PROVA%20AVALIACAO%20ENSINO%20RELIGIOSO%20PRIMEIRO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ENSINO RELIGIOSO: PRIMEIRO TRIMESTRE</a></li>
+<li><a href="PROVA%20AVALIACAO%20ENSINO%20RELIGIOSO%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ENSINO RELIGIOSO: SEGUNDO TRIMESTRE</a></li>
 
   </ul>
 
@@ -157,6 +160,29 @@
     Escola Municipal Professora Eunice Carneiro
   </div>
 
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
+
 </body>
 
 </html>
+```
