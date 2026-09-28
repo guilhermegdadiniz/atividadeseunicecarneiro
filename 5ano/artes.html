@@ -149,13 +149,37 @@
 
   <ul id="listaAtividades">
 
-    <!-- COLOQUE AQUI AS ATIVIDADES DE ARTES -->
+<li><a href="ALEIJADINHO.pdf" target="_blank">ALEIJADINHO</a></li>
+<li><a href="DANCAS.pdf" target="_blank">DANÇAS</a></li>
+<li><a href="MUSEUS.pdf" target="_blank">MUSEUS</a></li>
+<li><a href="PROVA%20AVALIACAO%20ARTES%20PRIMEIRO%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: PRIMEIRO TRIMESTRE 02</a></li>
+<li><a href="PROVA%20AVALIACAO%20ARTES%20PRIMEIRO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: PRIMEIRO TRIMESTRE</a></li>
+<li><a href="PROVA%20AVALIACAO%20ARTES%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: SEGUNDO TRIMESTRE</a></li>
+<li><a href="SOM%20E%20MUSICA.pdf" target="_blank">SOM E MÚSICA</a></li>
 
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+    const lista = document.getElementById("listaAtividades");
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+  </script>
 
 </body>
 
