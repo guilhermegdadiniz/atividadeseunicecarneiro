@@ -130,7 +130,9 @@
 <body>
 
   <div class="logo">
-    <img src="../logo.png" alt="Escola Municipal Professora Eunice Carneiro">
+    <img
+      src="../logo.png"
+      alt="Escola Municipal Professora Eunice Carneiro">
   </div>
 
   <h1>
@@ -149,13 +151,51 @@
 
   <ul id="listaAtividades">
 
-    <!-- COLOQUE AQUI AS ATIVIDADES DE PORTUGUÊS -->
+<li><a href="DIA%20INTERNACIONAL%20DA%20MULHER.pdf" target="_blank">DIA INTERNACIONAL DA MULHER</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20A%20ROTINA%20DIGITAL.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: A ROTINA DIGITAL</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20BERCOS%20DA%20VIDA%20.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: BERÇOS DA VIDA</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20CASCAO%20E%20CEBOLINHA.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: CASCÃO E CEBOLINHA</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20CRIANCAS%20SURDAS%20.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: CRIANÇAS SURDAS</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20FAUSTAO.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: FAUSTÃO</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20NICHOLAS%20SANTOS%20NADADOR.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: NICHOLAS SANTOS, NADADOR</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20O%20MACACO%20E%20O%20CROCODILO.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: O MACACO E O CROCODILO</a></li>
+<li><a href="INTERPRETACAO%20DE%20TEXTO%20O%20MACACO%20INCENDIO%20CRIMINOSO.pdf" target="_blank">INTERPRETAÇÃO DE TEXTO: O MACACO E O INCÊNDIO CRIMINOSO</a></li>
+<li><a href="PRIMEIRO%20DIA%20DE%20AULA.pdf" target="_blank">PRIMEIRO DIA DE AULA</a></li>
+<li><a href="PRODUCAO%20DE%20TEXTO%20USANDO%20O%20DICIONARIO.pdf" target="_blank">PRODUÇÃO DE TEXTO: USANDO O DICIONÁRIO</a></li>
+<li><a href="PRONOME%20VERBO%20E%20SUBSTANTIVO.pdf" target="_blank">PRONOME, VERBO E SUBSTANTIVO</a></li>
+<li><a href="PROVA%20AVALIACAO%20PORTUGUES%20PRIMEIRO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO PORTUGUÊS: PRIMEIRO TRIMESTRE</a></li>
+<li><a href="PROVA%20AVALIACAO%20PORTUGUES%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO PORTUGUÊS: SEGUNDO TRIMESTRE</a></li>
+<li><a href="SIMULADO%20INTERNO%20DE%20LINGUA%20PORTUGUESA%205%20ANO.pdf" target="_blank">SIMULADO INTERNO DE LÍNGUA PORTUGUESA: 5º ANO</a></li>
+<li><a href="TEXTO%20NARRATIVO%20E%20DESCRITIVO.pdf" target="_blank">TEXTO NARRATIVO E DESCRITIVO</a></li>
 
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
