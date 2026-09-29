@@ -149,13 +149,41 @@
 
   <ul id="listaAtividades">
 
-    <!-- COLOQUE AQUI AS ATIVIDADES DE GEOGRAFIA -->
+<li><a href="MAPA%20E%20OS%20SEUS%20ELEMENTOS.pdf" target="_blank">MAPA E OS SEUS ELEMENTOS</a></li>
+<li><a href="MIGRACAO.pdf" target="_blank">MIGRAÇÃO</a></li>
+<li><a href="POPULACAO%20BRASILEIRA.pdf" target="_blank">POPULAÇÃO BRASILEIRA</a></li>
+<li><a href="POPULACAO%20MASCULINA%20E%20FEMININA.pdf" target="_blank">POPULAÇÃO MASCULINA E FEMININA</a></li>
+<li><a href="PROVA%20AVALIACAO%20GEOGRAFIA%20PRIMEIRO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO GEOGRAFIA: PRIMEIRO TRIMESTRE</a></li>
+<li><a href="PROVA%20AVALIACAO%20GEOGRAFIA%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO GEOGRAFIA: SEGUNDO TRIMESTRE</a></li>
+<li><a href="URBANIZACAO.pdf" target="_blank">URBANIZAÇÃO</a></li>
 
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
 
 </body>
 
