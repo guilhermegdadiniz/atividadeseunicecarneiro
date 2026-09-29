@@ -149,7 +149,12 @@
 
   <ul id="listaAtividades">
 
-    <!-- COLOQUE AQUI AS ATIVIDADES DE HISTÓRIA -->
+<li><a href="A%20ORIGEM%20DO%20CARNAVAL.pdf" target="_blank">A ORIGEM DO CARNAVAL</a></li>
+<li><a href="CIDADANIA%20E%20DIREITOS%20HUMANOS.pdf" target="_blank">CIDADANIA E DIREITOS HUMANOS</a></li>
+<li><a href="DIREITO%20DOS%20IDOSOS.pdf" target="_blank">DIREITO DOS IDOSOS</a></li>
+<li><a href="HISTORIA%20DOS%20POVOS.pdf" target="_blank">HISTÓRIA DOS POVOS</a></li>
+<li><a href="PROVA%20AVALIACAO%20HISTORIA%20PRIMEIRO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: PRIMEIRO TRIMESTRE</a></li>
+<li><a href="PROVA%20AVALIACAO%20HISTORIA%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: SEGUNDO TRIMESTRE</a></li>
 
   </ul>
 
@@ -157,6 +162,29 @@
     Escola Municipal Professora Eunice Carneiro
   </div>
 
+  <script>
+
+    const lista = document.getElementById("listaAtividades");
+    const atividades = Array.from(lista.children);
+
+    atividades.sort((a, b) => {
+
+      const nomeA = a.textContent.trim();
+      const nomeB = b.textContent.trim();
+
+      return nomeA.localeCompare(nomeB, "pt-BR", {
+        sensitivity: "base"
+      });
+
+    });
+
+    atividades.forEach(atividade => {
+      lista.appendChild(atividade);
+    });
+
+  </script>
+
 </body>
 
 </html>
+
