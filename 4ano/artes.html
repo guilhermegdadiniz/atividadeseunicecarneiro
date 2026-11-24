@@ -151,24 +151,61 @@
 
   <ul id="listaAtividades">
 
-<li><a href="ARTISTAS%20MONTESCLARENSES.pdf" target="_blank">ARTISTAS MONTESCLARENSES</a></li>
-<li><a href="COLORIR%20FESTA%20JUNINA%20.pdf" target="_blank">COLORIR FESTA JUNINA</a></li>
-<li><a href="DIA%20DA%20ARVORE.pdf" target="_blank">DIA DA ÁRVORE</a></li>
-<li><a href="FOLCLORE%20BRASILEIRO.pdf" target="_blank">FOLCLORE BRASILEIRO</a></li>
-<li><a href="HISTORIA%20DA%20ARTE.pdf" target="_blank">HISTÓRIA DA ARTE</a></li>
-<li><a href="MUSICA%20E%20LUIZ%20GONZAGA.pdf" target="_blank">MÚSICA E LUIZ GONZAGA</a></li>
-<li><a href="PROVA%20AVALIACAO%20ARTES%201%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: 1º TRIMESTRE</a></li>
-<li><a href="PROVA%20AVALIACAO%20ARTES%202%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: 2º TRIMESTRE</a></li>
-<li><a href="ROMERO%20BRITO%20NOTAS%20MUSICAIS.pdf" target="_blank">ROMERO BRITO E NOTAS MUSICAIS</a></li>
-<li><a href="XILOGRAVURA.pdf" target="_blank">XILOGRAVURA</a></li>
-<li><a href="AVALIACAO%20PROVA%20ARTES%20TERCEIRO%20TRIMESTRE%204%20ANO.pdf" target="_blank">AVALIAÇÃO – PROVA DE ARTES – 3º TRIMESTRE – 4º ANO</a></li>
-<li><a href="AVALIACAO%20PROVA%20ARTES%20TERCEIRO%20TRIMESTRE%204%20ANO%2002.pdf" target="_blank">AVALIAÇÃO – PROVA DE ARTES – 3º TRIMESTRE – 4º ANO 02</a></li>
+    <li><a href="ARTISTAS%20MONTESCLARENSES.pdf" target="_blank">ARTISTAS MONTESCLARENSES</a></li>
+
+    <li><a href="AVALIACAO%20PROVA%20ARTES%20TERCEIRO%20TRIMESTRE%204%20ANO.pdf" target="_blank">AVALIAÇÃO – PROVA DE ARTES – 3º TRIMESTRE – 4º ANO</a></li>
+
+    <li><a href="AVALIACAO%20PROVA%20ARTES%20TERCEIRO%20TRIMESTRE%204%20ANO%2002.pdf" target="_blank">AVALIAÇÃO – PROVA DE ARTES – 3º TRIMESTRE – 4º ANO 02</a></li>
+
+    <li><a href="COLORIR%20FESTA%20JUNINA%20.pdf" target="_blank">COLORIR FESTA JUNINA</a></li>
+
+    <li><a href="DIA%20DA%20ARVORE.pdf" target="_blank">DIA DA ÁRVORE</a></li>
+
+    <li><a href="FOLCLORE%20BRASILEIRO.pdf" target="_blank">FOLCLORE BRASILEIRO</a></li>
+
+    <li><a href="HISTORIA%20DA%20ARTE.pdf" target="_blank">HISTÓRIA DA ARTE</a></li>
+
+    <li><a href="MUSICA%20E%20LUIZ%20GONZAGA.pdf" target="_blank">MÚSICA E LUIZ GONZAGA</a></li>
+
+    <li><a href="PROVA%20AVALIACAO%20ARTES%201%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: 1º TRIMESTRE</a></li>
+
+    <li><a href="PROVA%20AVALIACAO%20ARTES%202%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO ARTES: 2º TRIMESTRE</a></li>
+
+    <li><a href="ROMERO%20BRITO%20NOTAS%20MUSICAIS.pdf" target="_blank">ROMERO BRITO E NOTAS MUSICAIS</a></li>
+
+    <li><a href="XILOGRAVURA.pdf" target="_blank">XILOGRAVURA</a></li>
 
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      const lista = document.getElementById("listaAtividades");
+
+      const atividades = Array.from(lista.querySelectorAll("li"));
+
+      atividades.sort(function(a, b) {
+
+        const nomeA = a.querySelector("a").textContent.trim();
+        const nomeB = b.querySelector("a").textContent.trim();
+
+        return nomeA.localeCompare(nomeB, "pt-BR", {
+          sensitivity: "base",
+          numeric: true
+        });
+
+      });
+
+      atividades.forEach(function(atividade) {
+        lista.appendChild(atividade);
+      });
+
+    });
+  </script>
 
 </body>
 
