@@ -128,21 +128,59 @@
 
   <ul id="listaAtividades">
 
-<li><a href="CULTURA%20INDIGENA%20NO%20BRASIL.pdf" target="_blank">CULTURA INDÍGENA NO BRASIL</a></li>
-<li><a href="ESPACO%20PUBLICO%20E%20PRIVADO%20E%20PATRIMONIO%20CULTURAL.pdf" target="_blank">ESPAÇO PÚBLICO E PRIVADO E PATRIMÓNIO CULTURAL</a></li>
-<li><a href="HISTORIA%20DE%20MONTES%20CLAROS.pdf" target="_blank">HISTÓRIA DE MONTES CLAROS</a></li>
-<li><a href="O%20LUGAR%20QUE%20VIVEMOS.pdf" target="_blank">O LUGAR EM QUE VIVEMOS</a></li>
-<li><a href="OS%20NOMES%20E%20A%20HISTORIA%20DA%20NOSSA%20CIDADE.pdf" target="_blank">OS NOMES E A HISTÓRIA DA NOSSA CIDADE</a></li>
-<li><a href="PROVA%20AVALIACAO%20HISTORIA%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: SEGUNDO TRIMESTRE</a></li>
-<li><a href="PROVA%20AVALIACAO%20HISTORIA%20SEGUNDO%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: SEGUNDO TRIMESTRE 02</a></li>
-<li><a href="TRABALHO%20CULINARIA%20AFRO%20BRASILEIRA.pdf" target="_blank">TRABALHO: CULINÁRIA AFRO-BRASILEIRA</a></li>
-<li><a href="AVALIACAO%20PROVA%20HISTORIA%20TERCEIRO%20TRIMESTRE%203%20ANO.pdf" target="_blank">AVALIAÇÃO – PROVA DE HISTÓRIA – 3º TRIMESTRE – 3º ANO</a></li>
+    <li><a href="AVALIACAO%20PROVA%20HISTORIA%20TERCEIRO%20TRIMESTRE%203%20ANO.pdf" target="_blank">AVALIAÇÃO – PROVA DE HISTÓRIA – 3º TRIMESTRE – 3º ANO</a></li>
+
+    <li><a href="CULTURA%20INDIGENA%20NO%20BRASIL.pdf" target="_blank">CULTURA INDÍGENA NO BRASIL</a></li>
+
+    <li><a href="ESPACO%20PUBLICO%20E%20PRIVADO%20E%20PATRIMONIO%20CULTURAL.pdf" target="_blank">ESPAÇO PÚBLICO E PRIVADO E PATRIMÓNIO CULTURAL</a></li>
+
+    <li><a href="HISTORIA%20DE%20MONTES%20CLAROS.pdf" target="_blank">HISTÓRIA DE MONTES CLAROS</a></li>
+
+    <li><a href="O%20LUGAR%20QUE%20VIVEMOS.pdf" target="_blank">O LUGAR EM QUE VIVEMOS</a></li>
+
+    <li><a href="OS%20NOMES%20E%20A%20HISTORIA%20DA%20NOSSA%20CIDADE.pdf" target="_blank">OS NOMES E A HISTÓRIA DA NOSSA CIDADE</a></li>
+
+    <li><a href="PROVA%20AVALIACAO%20HISTORIA%20SEGUNDO%20TRIMESTRE.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: SEGUNDO TRIMESTRE</a></li>
+
+    <li><a href="PROVA%20AVALIACAO%20HISTORIA%20SEGUNDO%20TRIMESTRE%2002.pdf" target="_blank">PROVA AVALIAÇÃO HISTÓRIA: SEGUNDO TRIMESTRE 02</a></li>
+
+    <li><a href="TRABALHO%20CULINARIA%20AFRO%20BRASILEIRA.pdf" target="_blank">TRABALHO: CULINÁRIA AFRO-BRASILEIRA</a></li>
 
   </ul>
 
   <div class="rodape">
     Escola Municipal Professora Eunice Carneiro
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      const lista = document.getElementById("listaAtividades");
+
+      const atividades = Array.from(lista.querySelectorAll("li"));
+
+      atividades.sort(function(a, b) {
+
+        const nomeA = a.querySelector("a").textContent.trim();
+        const nomeB = b.querySelector("a").textContent.trim();
+
+        return nomeA.localeCompare(nomeB, "pt-BR", {
+          sensitivity: "base",
+          numeric: true
+        });
+
+      });
+
+      atividades.forEach(function(atividade) {
+        lista.appendChild(atividade);
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>
 
 </body>
 
